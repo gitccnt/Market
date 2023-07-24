@@ -86,7 +86,7 @@ q            = exit")
             except Exception:
                 print('>>>Admin Error')
 
-    elif check_admin is False:
+    elif not bool(check_admin):
         while True:
             print('\n>>>Hi')
             try:
