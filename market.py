@@ -305,6 +305,7 @@ __________________________________________')
                                                  range(len(self.accounts))]:
                             self.accounts[self.acc_count] = oAccount, True
                             self.acc_count += 1
+                            self.press_enter()
                             break
                         else:
                             print('>>>Such login is already exists')
@@ -314,6 +315,7 @@ __________________________________________')
                                                  range(len(self.accounts))]:
                             self.accounts[self.acc_count] = oAccount, False
                             self.acc_count += 1
+                            self.press_enter()
                             break
                         else:
                             print('>>>Such login is already exists')
@@ -341,20 +343,23 @@ __________________________________________')
                 print("0_O")
 
     def show_accounts(self):
-        print([(list(self.accounts.items())[i][0], list(self.accounts.values())[i][0].login) for i in
-               range(len(self.accounts))])
+        print('\n'.join([f'N{list(self.accounts.items())[i][0]} - Login name:{list(self.accounts.values())[i][0].login}'
+                         for i in range(len(self.accounts))]))
+     #   print([(list(self.accounts.items())[i][0], list(self.accounts.values())[i][0].login) for i in
+    #           range(len(self.accounts))])
         self.press_enter()
 
     def show_id(self):
-        print('\n'+'\n'.join([f'{x}:' + ' {}' for x in self.id_products.keys()]).format(*self.id_products.values()))
+        print('\n' + '\n'.join([f'{x}:' + ' {}' for x in self.id_products.keys()]).format(*self.id_products.values()))
         self.press_enter()
 
     def show_prices(self):
-        print('\n'+'\n'.join([f'{x}:' + ' {}€' for x in self.products_prices.keys()]).format(*self.products_prices.values()))
+        print('\n' + '\n'.join([f'{x}:' + ' {}€' for x in self.products_prices.keys()]).format(
+            *self.products_prices.values()))
         self.press_enter()
 
     def show_promo(self):
-        print('\n'+'\n'.join([f'{x}:' + ' {}%' for x in self.promo_price.keys()]).format(*self.promo_price.values()))
+        print('\n' + '\n'.join([f'{x}:' + ' {}%' for x in self.promo_price.keys()]).format(*self.promo_price.values()))
         self.press_enter()
 
     def delete_acc(self):
