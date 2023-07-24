@@ -78,7 +78,7 @@ class Market:
         basket = re.sub('\d{1,3}[.]\s\s', '', self.show_basket())
         line = 52 * '-'
         spaces_all = [21 * ' ', 18 * ' ', 20 * ' ',
-                      (28 - (len(str(round(self.total_price, 1)))) + len('Total price')) * ' ']
+                      (29 - (len(str(round(self.total_price, 1)))) + len('Total price')) * ' ']
         return (
             f"{spaces_all[0]}{self.name}\n{spaces_all[1]}{self.address}\n{spaces_all[2]}{self.phone}\n{line}\n{basket}\n\
 {line}\nTotal price{spaces_all[3]}{round(self.total_price, 2)}€")
