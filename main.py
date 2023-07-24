@@ -55,7 +55,7 @@ delete promo = delete promo of the product\n\
 add stock    = add stock with price\n\
 delete stock = delete stock from market\n\
 q            = exit")
-                terminal_input = input().strip()
+                terminal_input = input('>>>:').strip()
                 if terminal_input == 'manage':
                     oMarket.manage_basket(login)
                 elif terminal_input == 'operator':
