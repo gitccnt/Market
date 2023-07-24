@@ -83,8 +83,8 @@ q            = exit")
                 elif terminal_input == 'q':
                     break
 
-            except Exception as e:
-                print('>>>Admin Error', e)
+            except Exception:
+                print('>>>Admin Error')
 
     elif check_admin is False:
         while True:
@@ -100,5 +100,5 @@ q      = exit')
                 elif terminal_input == 'q':
                     break
 
-            except Exception as e:
-                print('>>>Operator error', e)
+            except Exception:
+                print('>>>Operator error')
