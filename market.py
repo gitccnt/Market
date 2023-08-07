@@ -345,8 +345,6 @@ __________________________________________')
     def show_accounts(self):
         print('\n'.join([f'N{list(self.accounts.items())[i][0]} - Login name:{list(self.accounts.values())[i][0].login}'
                          for i in range(len(self.accounts))]))
-     #   print([(list(self.accounts.items())[i][0], list(self.accounts.values())[i][0].login) for i in
-    #           range(len(self.accounts))])
         self.press_enter()
 
     def show_id(self):
