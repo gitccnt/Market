@@ -29,8 +29,8 @@ while True:
                                         range(len(oMarket.accounts))] else False
         if check_login is False or password is False:
             raise Exception
-    except Exception as e:
-        print('>>>Login or password are not correct', e)
+    except Exception:
+        print('>>>Login or password are not correct')
     else:
         check_admin = True if True is list(oMarket.accounts.values())[check_login_filter[0]][1] else False
         login = list(oMarket.accounts.values())[check_login_filter[0]][0].login
@@ -86,7 +86,7 @@ q            = exit")
             except Exception:
                 print('>>>Admin Error')
 
-    elif not bool(check_admin):
+    elif check_admin is False:
         while True:
             print('\n>>>Hi')
             try:
